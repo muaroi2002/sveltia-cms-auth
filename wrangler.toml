@@ -1,3 +1,11 @@
 name = "sveltia-cms-auth"
 main = "src/index.js"
 compatibility_date = "2023-03-24"
+
+# Keep the variables and secrets set in the Cloudflare dashboard
+# (GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET) across deploys.
+keep_vars = true
+
+[vars]
+# Only vfrs.com.vn may use this auth endpoint (anti-abuse).
+ALLOWED_DOMAINS = "vfrs.com.vn"
